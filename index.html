@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Cinematic Birthday Surprise | For Someone Special</title>
+    <!-- High-End Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section id="hero-page" class="page active">
+        <div id="particle-container"
+            style="position: absolute; width: 100%; height: 100%; top:0; left:0; pointer-events: none;"></div>
+        <h1 class="hero-title">Happy Birthday, Sudeshna</h1>
+        <p class="hero-sub">A Cinematic Journey Created Just For You</p>
+        <button class="btn-neon" onclick="transitionTo('message-slider-page')">Open Your Gift</button>
+    </section>
+
+    <!-- MESSAGE SLIDER SECTION -->
+    <section id="message-slider-page" class="page">
+        <div id="slider-particles"
+            style="position: absolute; width: 100%; height: 100%; top:0; left:0; pointer-events: none;"></div>
+        <div class="slider-card">
+            <div id="step-1" class="step-content active">
+                <h2 class="step-text">It's Your Special Day</h2>
+                <button class="btn-neon" onclick="nextStep(2)">Next</button>
+            </div>
+            <div id="step-2" class="step-content">
+                <h2 class="step-text">Have a look at it Kanna</h2>
+                <button class="btn-neon" onclick="nextStep(3)">Next</button>
+            </div>
+            <div id="step-3" class="step-content">
+                <h2 class="step-text">Ready for your surprise?</h2>
+                <button class="btn-neon" onclick="finishSlider()">Let's Go</button>
+            </div>
+            <div class="slider-dots">
+                <div id="dot-1" class="dot active"></div>
+                <div id="dot-2" class="dot"></div>
+                <div id="dot-3" class="dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CELEBRATION SECTION -->
+    <section id="celebration-page" class="page">
+        <div class="fairy-lights-container" id="fairy-lights-container">
+            <svg class="wire-svg" preserveAspectRatio="none" viewBox="0 0 1000 150">
+                <path id="wire-path" d="M0,20 Q100,60 200,20 T400,20 T600,20 T800,20 T1000,20" />
+            </svg>
+        </div>
+        <div class="glass-container" style="background: transparent; border: none; box-shadow: none;">
+            <h2 id="celeb-hint" style="font-size: 1.5rem; margin-bottom: 30px; letter-spacing: 2px;">The Stage is Set...
+            </h2>
+            <button id="celeb-master-btn" class="btn-neon" onclick="celebFlow()">💡 Turn On Lights</button>
+        </div>
+    </section>
+
+    <!-- CURTAIN SECTION -->
+    <section id="curtain-page" class="page" style="padding: 0;">
+        <div class="stage" id="stage">
+            <div class="curtain-panel curtain-left"></div>
+            <div class="curtain-panel curtain-right"></div>
+            <div class="secret-content">
+                <div class="message-card" id="message-card">
+                    <h2
+                        style="font-family: 'Dancing Script'; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--accent); margin-bottom: 20px;">
+                        My Dear Sudeshna,</h2>
+                    <p style="font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.8; color: rgba(255,255,255,0.8);">
+                        Today isn't just a date on the calendar; it's a celebration of the light you bring into my life.
+                        Happy Birthday my Love❤️
+
+                        No matter how much time passes, you'll always hold a special place in my heart. I still smile
+                        when I think about the memories we shared.
+
+                        Today, I just want to wish you happiness, peace, and all the beautiful things life has to offer.
+                        Thank you for being a part of my story.
+
+                        Take care, and have a truly wonderful birthday Kanna🎂✨. Rep nee dress chudali ani undhi kanna because ntha ina elegence loo nee tharvathe evvru ina 
+
+                    </p>
+                    <button class="btn-neon" style="margin-top: 40px; animation: none;"
+                        onclick="transitionTo('gallery-page')">Our Memories</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATED GALLERY SECTION -->
+    <section id="gallery-page" class="page">
+        <!-- Persistent Background Elements -->
+        <div id="gallery-bg-elements"
+            style="position: fixed; top: 0; left: 0; width: 100%; height: auto; pointer-events: none; z-index: -1;">
+        </div>
+
+        <h2 class="gallery-title">Moments in Time</h2>
+        <div class="gallery-grid">
+            <!-- Memory 1 -->
+            <div class="memory-card">
+                <img src="./assects/img1.jpeg" alt="Memory" class="memory-image">
+                <div class="memory-hover-overlay">
+                    <p class="hover-message">You make my world beautiful ❤️</p>
+                </div>
+            </div>
+            <!-- Memory 2 -->
+            <div class="memory-card">
+                <img src="./assects/img2.jpeg" alt="Memory" class="memory-image">
+                <div class="memory-hover-overlay">
+                    <p class="hover-message">Our memories are forever ✨</p>
+                </div>
+            </div>
+            <!-- Memory 3 -->
+            <div class="memory-card">
+                <img src="./assects/img3.jpeg" alt="Memory" class="memory-image">
+                <div class="memory-hover-overlay">
+                    <p class="hover-message">My favorite smile in the world 💖</p>
+                </div>
+            </div>
+            <!-- Memory 4 -->
+            <div class="memory-card">
+                <img src="./assects/img4.jpeg" alt="Memory" class="memory-image">
+                <div class="memory-hover-overlay">
+                    <p class="hover-message">Every second with you is a gift 🎁</p>
+                </div>
+            </div>
+            <!-- Memory 5 -->
+            <div class="memory-card">
+                <img src="./assects/img5.jpeg" alt="Memory" class="memory-image">
+                <div class="memory-hover-overlay">
+                    <p class="hover-message">To many more adventures together 🥂</p>
+                </div>
+            </div>
+            <!-- Memory 6 -->
+            <div class="memory-card">
+                <img src="./assects/img6.jpeg" alt="Memory" class="memory-image">
+                <div class="memory-hover-overlay">
+                    <p class="hover-message">Always & Forever 🌹</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn-neon" onclick="transitionTo('secret-page')">
+            One Last Surprise ❤️
+        </button>
+        <div style="text-align: center; padding: 100px 0;">
+            <button class="btn-neon" onclick="location.reload()">Replay The Magic</button>
+        </div>
+
+    </section>
+
+    <audio id="birthday-audio" loop>
+        <source src="./sundari.mp3" type="audio/mpeg">
+    </audio>
+    <!-- SECRET PAGE -->
+    <section id="secret-page" class="page">
+
+        <div class="password-card">
+
+            <h1 class="secret-title">
+                One Last Surprise ❤️
+            </h1>
+
+            <p class="secret-subtitle">
+                Only one person knows the key...
+            </p>
+
+            <p class="secret-hint">
+                Hint: Our secret code ❤️
+            </p>
+
+            <input type="password" id="secret-password" placeholder="Enter Password">
+
+            <button class="btn-neon" onclick="unlockSecret()">
+                Unlock
+            </button>
+
+            <div id="hidden-message">
+
+                <h2 class="final-love-message">
+                    A Message Just For You ❤️
+                </h2>
+
+                <div class="secret-message">
+
+                    To My Favorite Person,
+
+                    If you've unlocked this, thank you for taking the time to reach the end.
+
+                    There is something I've wanted to say—not to change your mind, not to make you feel guilty, and not
+                    because I expect anything in return.
+
+                    When we were together, I made mistakes. Looking back, there are things I would do differently,
+                    conversations I would handle better, and moments I would appreciate more.
+
+                    Even though our paths separated, the memories we created never lost their value to me. They remain
+                    some of the happiest moments of my life.
+
+                    If life never brings us together again, I will still be grateful that I got the chance to know you,
+                    care for you, and create those memories with you.
+
+                    But if there is even a small part of you that wonders what a new beginning could look like, I want
+                    you to know that I would rather build something new with you than try to recreate the past.
+
+                    Not the same story.
+
+                    Not the same mistakes.
+
+                    Just two people who have learned, grown, and chosen each other again.
+
+                    Whatever your answer may be, I genuinely wish for your happiness, your success, and all the
+                    beautiful things life has to offer.
+
+                    Thank you for being a chapter of my life that I will always cherish to have you in my life baby 💋❤️
+                    <h4>
+                        Okka Chance evvochu gaa kanna maybe i deserve it.
+                    </h4>
+                </div>
+
+            </div>
+
+        </div>
+<div class="scroll-hint"> Scroll up to see the message!</div>
+    </section>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
